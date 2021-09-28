@@ -41,12 +41,11 @@ Array.prototype.transpose = function() {
     debugger
     // let sub = this[i];
     for (let i = 0; i < this[0].length; i++) {
-        // debugger
+        debugger
         // looping through sub arrays
-        // let sub = this[i];
         let b = [];
         for (let j = 0; j < this.length; j++) {
-            // debugger 
+            debugger 
             b.push(this[j][i]);
         }
         a.push(b);
