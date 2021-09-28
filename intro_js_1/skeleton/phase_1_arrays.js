@@ -1,14 +1,14 @@
 
-function Array(array) {
-    this.array = array
-}
+// function Array(array) {
+//     this.array = array
+// }
 // constructor function(has to be capitalized): initialize the array prototype for the new instance
 // on line 16.
 Array.prototype.uniq = function (){
     let a = [];
-    for (let i = 0; i < this.array.length; i++) {
-        if (!a.includes(this.array[i]) ){
-            a.push(this.array[i]);
+    for (let i = 0; i < this.length; i++) {
+        if (!a.includes(this[i])){
+            a.push(this[i]);
         }
     }
     return a;
@@ -24,9 +24,9 @@ Array.prototype.uniq = function (){
 
 Array.prototype.twoSum = function () {
     let a = [];
-    for (let i = 0; i < this.array.length; i++) {
-        for (let j = 1; j < this.array.length; j++) {
-            if (this.array[i] + this.array[j] === 0) {
+    for (let i = 0; i < this.length; i++) {
+        for (let j = 1; j < this.length; j++) {
+            if (this[i] + this[j] === 0) {
                 a.push([i, j]);
             }
         }
@@ -34,29 +34,27 @@ Array.prototype.twoSum = function () {
     return a;
 }
 
-// const banana_array = new Array([-1, 2, 1, -2, 2, 3, -3, 3, 3]);
-// console.log(banana_array.twoSum());
+// console.log([-1, 2, 1, -2, 2, 3, -3, 3, 3].twoSum());
 
 Array.prototype.transpose = function() {
     let a = [];
-    console.log("hello")
-    // debugger
-    // let sub = this.array[i];
-    for (let i = 0; i < this.array.length; i++) {
+    debugger
+    // let sub = this[i];
+    for (let i = 0; i < this[0].length; i++) {
         // debugger
         // looping through sub arrays
-        let sub = this.array[i];
+        // let sub = this[i];
         let b = [];
-        for (let j = 0; j < this.array.length; j++) {
+        for (let j = 0; j < this.length; j++) {
             // debugger 
-            b.push(this.array[i][j]);
+            b.push(this[j][i]);
         }
         a.push(b);
     }
     return a;
 }
-const array = new Array([[1,2,3], [4,5,6]]);
-console.log(array.transpose())
+
+console.log([[1,2,3], [4,5,6]].transpose());
 
 
 // [[1,2,3]
