@@ -38,14 +38,11 @@ Array.prototype.twoSum = function () {
 
 Array.prototype.transpose = function() {
     let a = [];
-    debugger
     // let sub = this[i];
     for (let i = 0; i < this[0].length; i++) {
-        debugger
         // looping through sub arrays
         let b = [];
         for (let j = 0; j < this.length; j++) {
-            debugger 
             b.push(this[j][i]);
         }
         a.push(b);
@@ -53,7 +50,7 @@ Array.prototype.transpose = function() {
     return a;
 }
 
-console.log([[1,2,3], [4,5,6]].transpose());
+// console.log([[1,2,3], [4,5,6]].transpose());
 
 
 // [[1,2,3]
